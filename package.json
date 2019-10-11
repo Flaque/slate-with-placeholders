@@ -24,7 +24,7 @@
   "homepage": "https://github.com/flaque/slate-with-placeholders",
   "keywords": [],
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/index.jsx",
   "repository": {
     "type": "git",
     "url": "https://github.com/flaque/slate-with-placeholders.git"
