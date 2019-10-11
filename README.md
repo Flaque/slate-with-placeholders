@@ -1,6 +1,8 @@
 # slate-with-placeholders [![License](https://img.shields.io/npm/l/slate-with-placeholders.svg)](https://github.com/flaque/slate-with-placeholders/blob/master/package.json)
 
-Adds custom placeholders that you can put in any block.
+Adds custom placeholders that you can put in any block. Example:
+
+![screenshot of multiple placeholders](https://i.imgur.com/w15XsKH.png)
 
 ## Install
 
