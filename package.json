@@ -34,5 +34,8 @@
   "scripts": {
     "build": "rm -rf dist && tsc && parcel build src/index.tsx"
   },
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "react": "^16.10.2"
+  }
 }
