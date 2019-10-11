@@ -32,3 +32,53 @@ const plugins = [
 
 <Editor plugins={plugins} {/* ... */}>
 ```
+
+The text comes from the block's [`data`](https://docs.slatejs.org/slate-core/block#data) attribute, which lets you create dynamic placeholder texts. To set this, just add `placeholderText` to the block in question:
+```jsx
+import { Value } from 'slate';
+
+const value = Value.fromJS({
+  document: {
+    object: "document",
+    nodes: [
+      { 
+        object: "block",
+        type: "text-field",
+        data: {
+          placeholderText: "my custom placeholder text"
+        },
+        nodes: []
+      }
+    ],
+  },
+});
+
+// ...
+
+<Editor value={} />
+```
+
+## Custom Rendering
+
+If you don't like the default rendering in `renderPlaceholders`, you can just render it yourself by creating your own `renderDecoration` function:
+
+```jsx
+function renderDecoration(props, editor, next) {
+  const { decoration, children } = props;
+  if (decoration.type !== "placeholder") {
+    return next();
+  }
+
+  const text = decoration.data.get("placeholderText");
+
+  return (
+    <span> 
+      <span style={{color: "red"}}>
+        {text}
+      </span>
+      {/* NOTE: This children part is important to show the cursor */}
+      {children} 
+    </span>
+  );
+}
+```
