@@ -5,12 +5,14 @@
   "author": "flaque",
   "bugs": "https://github.com/flaque/slate-with-placeholders/issues",
   "dependencies": {
+    "immutable": "^4.0.0-rc.12",
     "slate": "^0.47.8",
     "slate-react": "^0.22.9",
     "tslib": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",
+    "parcel": "^1.12.4",
     "ts-node": "latest",
     "tslint": "latest",
     "typescript": "latest"
@@ -30,7 +32,7 @@
     "url": "https://github.com/flaque/slate-with-placeholders.git"
   },
   "scripts": {
-    "build": "rm -rf dist && tsc"
+    "build": "rm -rf dist && tsc && parcel build src/index.tsx"
   },
   "types": "dist/index.d.ts"
 }
